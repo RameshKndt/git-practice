@@ -1,0 +1,113 @@
+Version control System?
+>	Allows you to manage a collection of files and gives access to different versions of these files.
+> The VCS allows you to capture the content and structure of your files at a certain point in time.
+> At any point of time we can switch between versions are stored in the storage system and also we have a option to work on this paralley.
+> VCS are very good in tracking changes in the text files.
+> For exaple we want to track changes in HTML code or Java source code.
+> It's not efficient to trace changes in binary files.
+
+Localized VCS:
+---------------
+>This is going keep the local copies of the files.
+>This approach can be as simple as creating a manual copy of the relevant files.  
+Centralized VCS	
+---------------
+> A centralized version control system provides a server software component which stores and manages the different versions of the files.
+> A developer can copy a certain version from the central server on to their individual computer.
+
+Distributed VCS :
+-----------------
+> In a distributed vcs each user has a complete local copy of a repository on his individual computer.
+> The user can copy the existing repository.
+> The copying process is typically called cloning and the resulting repository can be refered to as a clone.
+> Every clone contains the full history of the collection of files and a cloned repository has the same functionality as the original repository.
+> Every repository can exchange versions of the files with other repositories by transporting these changes. This is typically done via a repository running on a server which is, unlike the local machine of a developer , always online.
+> 
+Introduction to Git
+--------------------
+Git is the leading version control system.
+Git originates from the Linux kernel development and was founded in 2005 by Linus Torvalds.
+
+Git repositories and working trees:
+-----------------------------------
+> A git repository manages a collection of files in a certain directory.
+> A git repository is file based, all versions of the managed files are stored on the file system.
+> Bare repositories: Used on a server for sharing changes coming from different developers.
+> Non-bare repositories: Target the user.
+Allows us to create new changes trhough the modification of files and to create new versions in the repository.This is the default type which is created if you dont specify any parameter during the clone operation.
+
+> push : sufficient authorization can send new versions of their local repo to remote via push operation.
+> pull or fetch: Integrate changes from remote repositories into local repo via pull or fetch operation.
+> Every local repository has a working tree.
+> The files in the working tree may be new or based on certain version from the repository.
+> The user can change and create files or delete them.
+> After doing the changes in the working tree. 
+> User can restore the files.
+> Adding a new version of the files to git repositry:
+	After modifying files in the working tree , we need to perform two steps to add them to the remote repository.
+	1> Staging Area :Move the required files to staging area.
+    2> Instruct Git to create a new version of the managed files via the commit operation.
+ Git terminology:
+ -----------------
+ Branch: 
+ A branch is a named pointer to a commit.
+ Selecting a branch in git terminology is called to checkout a branch.
+ If we are working in a certain brach, the creation of a new commit advances this pointer to the newly created commmit.
+ > We can create a new branch from an existing one and change the code independently from other branches.
+ > master is the default branch.
+ > Whenever cloning a repository will checkout the default repo.
+ 
+ Commit: 
+	> when you commit your changes into a repo this creates a new commit object in the git repository.
+	> This commit object uniquely uniquely a new revision > commit id.
+    > This version can be retrieved later.
+	> Each commit object contains the author and committer.
+ HEAD :
+    > HEAD is a symbolic reference most often pointing to the currently checked out branch.
+	> If you switch branches, the HEAD pointer points to branch pointer which in turn points to a commit.
+	> If you checkout a specific commit, the HEAD points to this commit directly.
+ Revision: Revision represents the version of the source code. Git implements revisions as commit object(or short commits). 
+ Staging Area: 
+   Staging area is the place to store changes in the working tree before the commit. 
+   Staging area contains a snapshot of the changes in the working tree.
+ Tag: 
+   A tag points to a commit which uniquely identifies a version of git repository. With a tag, you can have a named point to which you can always revert to.
+   The benefit of tags is to mark the reository for a specific reason, eg. with a release.
+   Branches and tags are named pointers.
+   Branches move when a commit is created, 
+   Tags always point to the same commit.
+   Tags can have a timestamp and a message associated with them.
+ Working tree: 
+   The working tree contains the set of working files for the repository.You can modify the content and commit the changes as new commits to the repository.
+> git config --list
+	diff.astextplain.textconv=astextplain
+	filter.lfs.clean=git-lfs clean -- %f
+	filter.lfs.smudge=git-lfs smudge -- %f
+	filter.lfs.process=git-lfs filter-process
+	filter.lfs.required=true
+	http.sslbackend=openssl
+	http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+	core.autocrlf=true
+	core.fscache=true
+	core.symlinks=false
+	pull.rebase=false
+	credential.helper=manager-core
+	credential.https://dev.azure.com.usehttppath=true
+	init.defaultbranch=master
+	user.email=kndtjavaj2ee@gmail.com
+	user.name=RameshKndt
+	filter.lfs.smudge=git-lfs smudge -- %f
+	filter.lfs.process=git-lfs filter-process
+	filter.lfs.required=true
+	filter.lfs.clean=git-lfs clean -- %f
+	gui.recentrepo=D:/git-work-test
+
+>git config --global user.name  "FirstName Lastname"
+>git config --global user.email "Your Email Addess" 
+
+>git init
+>git status
+> 
+		
+ 	
+
