@@ -10,3 +10,7 @@ function showMessage(){
 	console.log("show Message function");
 
 }
+function createNeFunc(){
+
+	console.log("ljkadkjlafjkladflk");
+}
