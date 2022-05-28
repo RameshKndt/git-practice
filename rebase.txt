@@ -6,3 +6,5 @@ use git commit --amend to make changes, or
 
 git rebase --continue
 git push --force
+
+---Practice above one ---
